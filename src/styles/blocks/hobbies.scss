@@ -1,0 +1,48 @@
+.hobbies__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.hobbies__item {
+  position: relative;
+  width: 30%;
+  margin-bottom: 10px;
+  padding-top: 50px;
+  text-align: center;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--traveling::before {
+    background-image: url('../images/icon-globe-europe.svg');
+  }
+  &--music::before {
+  background-image: url('../images/icon-headphones.svg');
+}
+  &--sport::before {
+  background-image: url('../images/icon-biking.svg');
+}
+  &--opensource::before {
+  background-image: url('../images/icon-gamepad.svg');
+}
+  &--games::before {
+  background-image: url('../images/icon-github.svg');
+}
+  &--beach::before {
+  background-image: url('../images/icon-umbrella-beach.svg');
+}
+}

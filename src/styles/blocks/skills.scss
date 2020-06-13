@@ -1,0 +1,40 @@
+.skills__list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills__item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills__name,
+.skills__level {
+  display: inline-block;
+}
+
+.skills__level {
+  text-align: right;
+}
+
+.skills__icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.skills__icon--empty {
+  background-color: #fff;
+}
+
+@media (min-width: $tablet-width) {
+  .skills__item {
+    margin-bottom: 15px;
+  }
+}

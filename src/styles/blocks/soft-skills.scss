@@ -1,0 +1,9 @@
+.soft-skills__item {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .soft-skills__item {
+    margin-bottom: 15px;
+  }
+}

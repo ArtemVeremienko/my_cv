@@ -1,10 +1,9 @@
 .header {
-  margin: 0 -16px;
   background-color: #fff;
-  padding: 10px;
 }
 
 .header__name {
+  display: none;
   font-family: $heading-font;
   font-size: $main-text * 3;
   text-align: center;
@@ -27,7 +26,7 @@
 
 .header__item {
   position: relative;
-  padding-left: 60px;
+  padding-left: 55px;
   padding-top: 5px;
   padding-bottom: 5px;
   color: #000;
@@ -35,12 +34,13 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 25px;
-    width: 25px;
-    height: 25px;
+    top: 5px;
+    left: 30px;
+    width: 16px;
+    height: 16px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
   }
 
   &--person::before {
@@ -68,3 +68,15 @@
   color: inherit;
 }
 
+@media (min-width: $tablet-width) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  .header__photo {
+    margin: 0;
+  }
+}

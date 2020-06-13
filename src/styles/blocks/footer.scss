@@ -1,0 +1,14 @@
+.footer {
+  padding: 10px;
+}
+
+.footer__address {
+  font-style: normal;
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding: 20px;
+  }
+}
