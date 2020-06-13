@@ -1,0 +1,44 @@
+.cv {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.cv__title {
+  position: relative;
+  padding-left: 40px;
+  font-family: $heading-font;
+  font-size: 26px;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+  }
+
+  &--profile::before {
+    background-image: url('../images/icon-person.svg');
+  }
+  &--education::before {
+    background-image: url('../images/icon-award.svg');
+  }
+  &--skills::before {
+    background-image: url('../images/icon-terminal.svg');
+  }
+  &--soft-skills::before {
+    background-image: url('../images/icon-thumbs-up.svg');
+  }
+  &--languages::before {
+    background-image: url('../images/icon-pie-chart.svg');
+  }
+  &--hobbies::before {
+    background-image: url('../images/icon-info.svg');
+  }
+}

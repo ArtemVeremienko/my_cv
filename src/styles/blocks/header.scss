@@ -1,0 +1,70 @@
+.header {
+  margin: 0 -16px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.header__name {
+  font-family: $heading-font;
+  font-size: $main-text * 3;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__photo {
+  display: block;
+  margin:  0 auto;
+  width: 250px;
+  // height: 250px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.header__list {
+  list-style: none;
+  padding: 0;
+}
+
+.header__item {
+  position: relative;
+  padding-left: 60px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--person::before {
+    background-image: url('../images/icon-person.svg');
+  }
+  &--birth::before {
+    background-image: url('../images/icon-calendar.svg');
+  }
+  &--flag::before {
+    background-image: url('../images/icon-flag.svg');
+  }
+  &--mail::before {
+    background-image: url('../images/icon-envelope.svg');
+  }
+  &--phone::before {
+    background-image: url('../images/icon-phone.svg');
+  }
+  &--link::before {
+    background-image: url('../images/icon-link.svg');
+  }
+}
+
+.header__link {
+  position: relative;
+  color: inherit;
+}
+

@@ -86,13 +86,13 @@ export const server = () => {
 // Watch
 
 export const watch = () => {
-  gulp.watch('src/*.html', gulp.series(html));
-  gulp.watch('src/styles/**/*.scss', gulp.series(styles));
-  gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
+  gulp.watch('src/*.html', html);
+  gulp.watch('src/styles/**/*.scss', styles);
+  gulp.watch('src/scripts/**/*.js', scripts);
   gulp.watch([
     'src/fonts/**/*',
     'src/images/**/*',
-  ], gulp.series(copy, sprite));
+  ], copy);
   gulp.watch('src/images/{icon-*,logo-*}.svg', gulp.series(sprite, html));
 };
 

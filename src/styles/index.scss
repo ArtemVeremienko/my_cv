@@ -1,3 +1,14 @@
-@import 'normalize';
-@import 'screen-reader';
+// Global
 
+@import 'normalize';
+@import 'fonts';
+@import 'box-model';
+@import 'variables';
+@import 'screen-reader';
+@import 'scaffolding';
+
+// Blocks
+
+@import 'blocks/grid.scss';
+@import 'blocks/cv.scss';
+@import 'blocks/header.scss';
