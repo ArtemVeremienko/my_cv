@@ -1,0 +1,19 @@
+.education__item p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .education__item p {
+    margin-bottom: 10px;
+  }
+
+  .education__proffession {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .education__proffession br {
+    display: none;
+  }
+}

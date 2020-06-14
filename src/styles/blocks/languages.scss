@@ -1,0 +1,18 @@
+.languages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.languages__item {
+  width: 40%;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .languages__item {
+    width: 30%;
+  }
+}

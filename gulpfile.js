@@ -79,20 +79,21 @@ export const server = () => {
   sync.init({
     server: 'build/',
     ui: false,
-    notify: false
+    notify: false,
+    cors: true,
   });
 };
 
 // Watch
 
 export const watch = () => {
-  gulp.watch('src/*.html', gulp.series(html));
-  gulp.watch('src/styles/**/*.scss', gulp.series(styles));
-  gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
+  gulp.watch('src/*.html', html);
+  gulp.watch('src/styles/**/*.scss', styles);
+  gulp.watch('src/scripts/**/*.js', scripts);
   gulp.watch([
     'src/fonts/**/*',
     'src/images/**/*',
-  ], gulp.series(copy, sprite));
+  ], copy);
   gulp.watch('src/images/{icon-*,logo-*}.svg', gulp.series(sprite, html));
 };
 
@@ -133,7 +134,7 @@ export const webp = () => {
 
 // Image processing
 
-export const imgproc = gulp.parallel(
+export const imgproc = gulp.series(
   images,
   webp
 );
@@ -142,7 +143,7 @@ export const imgproc = gulp.parallel(
 
 export const build = gulp.series(
   clean,
-  sprite,
+  // sprite,
   gulp.parallel(
     html,
     styles,

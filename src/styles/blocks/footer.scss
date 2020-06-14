@@ -1,0 +1,21 @@
+.footer {
+  padding: 10px;
+}
+
+.footer__address {
+  font-style: normal;
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+  }
+}

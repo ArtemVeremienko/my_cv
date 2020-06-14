@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: $mobile-width;
+  font-family: $main-font;
+  font-weight: normal;
+  font-size: $main-text;
+  color: $main-font-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
