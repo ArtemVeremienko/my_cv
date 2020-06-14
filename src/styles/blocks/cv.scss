@@ -24,13 +24,16 @@
   }
 
   &--profile::before {
-    background-image: url('../images/icon-person.svg');
+    background-image: url('../images/icon-person-lines.svg');
   }
   &--education::before {
     background-image: url('../images/icon-award.svg');
   }
   &--skills::before {
     background-image: url('../images/icon-terminal.svg');
+  }
+  &--tools::before {
+    background-image: url('../images/icon-tools.svg');
   }
   &--soft-skills::before {
     background-image: url('../images/icon-thumbs-up.svg');
@@ -50,9 +53,11 @@
     font-size: 18px;
   }
 
+  .cv__header,
   .cv__profile,
   .cv__education,
   .cv__skills,
+  .cv__tools,
   .cv__soft-skills,
   .cv__languages,
   .cv__hobbies {
@@ -67,5 +72,25 @@
       top: 3px;
     }
   }
+}
 
+@media (min-width: $desktop-width) {
+  .cv {
+    width: $desktop-width;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+
+  .cv__header,
+  .cv__profile,
+  .cv__education,
+  .cv__skills,
+  .cv__tools,
+  .cv__soft-skills,
+  .cv__languages,
+  .cv__hobbies {
+    width: 100%;
+  }
 }

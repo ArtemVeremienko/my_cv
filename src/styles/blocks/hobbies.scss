@@ -37,12 +37,24 @@
   background-image: url('../images/icon-biking.svg');
 }
   &--opensource::before {
-  background-image: url('../images/icon-gamepad.svg');
+  background-image: url('../images/icon-github.svg');
 }
   &--games::before {
-  background-image: url('../images/icon-github.svg');
+  background-image: url('../images/icon-gamepad.svg');
 }
   &--beach::before {
   background-image: url('../images/icon-umbrella-beach.svg');
 }
+}
+
+@media (min-width: $tablet-width) {
+  .hobbies__item {
+    margin-bottom: 15px;
+    padding-top: 55px;
+
+    &::before {
+      width: 45px;
+      height: 45px;
+    }
+  }
 }
